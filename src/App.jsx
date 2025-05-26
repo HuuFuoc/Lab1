@@ -7,11 +7,9 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <div className="d-flex flex-wrap justify-content-center align-items-start">
+      <div className="d-flex flex-wrap justify-content-start gap-3">
         {data.map((item) => (
-          <div className="p-1">
-            <CardComponent key={item.id} data={item} />
-          </div>
+          <CardComponent key={item.id} data={item} />
         ))}
       </div>
     </>
