@@ -5,7 +5,10 @@ import Card from "react-bootstrap/Card";
 export default function CardComponent({ data }) {
   return (
     <>
-      <Card style={{ width: "19rem", margin: "0.5rem" }}>
+      <Card
+        className="hover:scale-105 hover:shadow-lg  duration-200 p-1.5 bg-white rounded"
+        style={{ width: "19rem", margin: "0.5rem" }}
+      >
         <Card.Img
           variant="top"
           src={data.image}

@@ -1,13 +1,13 @@
 import React from "react";
 import CardComponent from "./components/CardComponent";
 import orchids from "./ListOfOrchids";
-import Navbar from "./components/Navbar";
+import Header from "./components/Navbar";
 export default function App() {
   const data = orchids;
   return (
     <>
-      <Navbar />
-      <div className="d-flex flex-wrap justify-content-start gap-3">
+      <Header />
+      <div className="flex flex-wrap justify-content-center">
         {data.map((item) => (
           <CardComponent key={item.id} data={item} />
         ))}
