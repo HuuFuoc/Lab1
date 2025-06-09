@@ -1,8 +1,7 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-
-export default function CardComponent({ data }) {
+export default function CardComponent({ data, handleShow }) {
   return (
     <>
       <Card
@@ -17,8 +16,10 @@ export default function CardComponent({ data }) {
         <Card.Body>
           <Card.Title>{data.name}</Card.Title>
           <Card.Text>🌍From: {data.origin}</Card.Text>
-          <Card.Text>🏷️Category: {data.category}</Card.Text>
-          <Button variant="primary">View More</Button>
+          <Card.Text className="mb-3">🏷️Category: {data.category}</Card.Text>
+          <Button onClick={handleShow} className="m-2" variant="primary">
+            View Detail
+          </Button>
         </Card.Body>
       </Card>
     </>
